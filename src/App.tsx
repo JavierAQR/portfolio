@@ -77,12 +77,20 @@ function App() {
         </header>
         <div className="grid grid-rows-3 min-h-screen items-center">
           <section className="row-span-1">
-            <h2 className="border-b-2 pb-2">Sobre mí :)</h2>
-            <p>...</p>
+            <h2 className="border-b-2 pb-1">Sobre mí :)</h2>
+            <p className="mt-7 text-lg/10 max-sm:text-base/8">
+              He trabajado en proyectos personales y colaborativos, creando
+              interfaces dinámicas, responsive y centradas en la experiencia del
+              usuario. Estoy siempre abierto a aprender nuevas herramientas. Soy
+              autodidacta, curioso y comprometido con aprender rápidamente en un
+              entorno real. Busco un equipo donde pueda contribuir con mi
+              energía y ganas de crecer, mientras aporto soluciones centradas en
+              el usuario.
+            </p>
           </section>
           <section className="row-span-2">
-            <h2 className="border-b-2 pb-2">Tecnologías</h2>
-            <div className="grid grid-cols-2 gap-10 mt-10 max-sm:grid-cols-1">
+            <h2 className="border-b-2 pb-1">Tecnologías</h2>
+            <div className="grid grid-cols-2 gap-10 mt-7 max-sm:grid-cols-1">
               <Technology name="Lenguajes">
                 <div className="tecnology-container">
                   <TechnologyItem name="HTML">
