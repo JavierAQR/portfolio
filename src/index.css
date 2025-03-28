@@ -8,3 +8,31 @@
 @theme {
   --font-inter: Inter, "sans-serif";
 }
+
+@layer base {
+  span {
+    @apply text-white font-semibold;
+  }
+
+  h2 {
+    @apply text-4xl font-semibold text-white max-sm:text-3xl;
+  }
+
+  h3 {
+    @apply text-white text-xl font-light max-sm:text-lg;
+  }
+
+  p {
+    @apply text-lg font-light max-sm:text-base text-white;
+  }
+}
+
+@layer components {
+  .contact-link {
+    @apply hover:text-[cyan] text-4xl;
+  }
+
+  .tecnology-container {
+    @apply grid grid-cols-4 gap-y-5 max-lg:grid-cols-3 max-md:grid-cols-2 w-full;
+  }
+}
