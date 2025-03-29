@@ -1,8 +1,4 @@
-const GitIcon = ({ size }: { size: number }) => {
-  return (
-    <svg
-      height={size}
-      width={size}
+<svg
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMidYMid"
       viewBox="0 0 256 256"
@@ -12,7 +8,3 @@ const GitIcon = ({ size }: { size: number }) => {
         fill="#DE4C36"
       />
     </svg>
-  );
-};
-
-export default GitIcon;

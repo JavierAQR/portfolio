@@ -1,11 +1,7 @@
-const VSIcon = ({ size }: { size: number }) => {
-  return (
-    <svg
+<svg
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width={size}
-      height={size}
       viewBox="0 0 48 48"
     >
       <path
@@ -21,7 +17,3 @@ const VSIcon = ({ size }: { size: number }) => {
         d="M9,14.104L34,33v9.647c0,1.198-1.482,1.758-2.275,0.86L4.658,18.761 c-0.9-0.83-0.849-2.267,0.107-3.032c0,0,1.324-1.232,1.803-1.574C7.304,13.63,8.271,13.57,9,14.104z"
       ></path>
     </svg>
-  );
-};
-
-export default VSIcon;

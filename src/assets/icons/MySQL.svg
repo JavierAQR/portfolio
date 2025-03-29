@@ -1,8 +1,4 @@
-const SQLIcon = ({ size }: { size: number }) => {
-  return (
-    <svg
-      width={size}
-      height={size}
+<svg
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMidYMid"
       viewBox="0 0 256 252"
@@ -13,7 +9,3 @@ const SQLIcon = ({ size }: { size: number }) => {
       />
       <path d="m58 43-7 1 6 7 4 9v-1c3-1 4-4 4-8l-2-4-5-4Z" fill="#00546B" />
     </svg>
-  );
-};
-
-export default SQLIcon;

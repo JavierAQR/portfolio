@@ -7,7 +7,7 @@ interface Props {
 
 export const Technology = ({ name, children }: Props) => {
   return (
-    <article className="flex flex-col items-start gap-5 w-full">
+    <article className="flex flex-col items-start gap-5 w-full rounded-xl p-3 bg-[#3b82c425]">
       <h3 className="max-md:text-center w-full">{name}</h3>
       {children}
     </article>

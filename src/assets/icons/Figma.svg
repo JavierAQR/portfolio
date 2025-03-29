@@ -1,8 +1,4 @@
-const FigmaIcon = ({ size }: { size: number }) => {
-  return (
-    <svg
-      width={size}
-      height={size}
+ <svg
       viewBox="0 0 54 80"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +31,3 @@ const FigmaIcon = ({ size }: { size: number }) => {
         </clipPath>
       </defs>
     </svg>
-  );
-};
-
-export default FigmaIcon;

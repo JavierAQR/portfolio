@@ -1,8 +1,4 @@
-const MaterialIcon = ({ size }: { size: number }) => {
-  return (
-    <svg
-      width={size}
-      height={size}
+ <svg
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMidYMid"
       viewBox="0 0 256 222"
@@ -12,7 +8,3 @@ const MaterialIcon = ({ size }: { size: number }) => {
         fill="#007FFF"
       />
     </svg>
-  );
-};
-
-export default MaterialIcon;

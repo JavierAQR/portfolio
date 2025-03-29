@@ -1,8 +1,6 @@
-const HTMLIcon = ({ size }: { size: number }) => {
-  return (
-    <svg
-      width={size}
-      height={size}
+<svg
+      width='60px'
+      height='60px'
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 452 520"
     >
@@ -16,8 +14,4 @@ const HTMLIcon = ({ size }: { size: number }) => {
         fill="#fff"
         d="M226 265h69l-7 73-62 17v59l115-32 16-174H226zm0-171v56h136l5-56z"
       />
-    </svg>
-  );
-};
-
-export default HTMLIcon;
+</svg>
