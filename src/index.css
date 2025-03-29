@@ -22,8 +22,16 @@
     @apply text-white text-xl font-light max-sm:text-lg;
   }
 
+  h5 {
+    @apply text-xs;
+  }
+
   p {
     @apply text-lg font-light max-sm:text-base text-[#d9e3eb];
+  }
+
+  section {
+    @apply mb-15;
   }
 }
 
@@ -37,7 +45,11 @@
   }
 
   .section-title {
-    @apply border-b-1 pb-1;
+    @apply border-b-1 pb-1 text-[cyan] mb-7;
+  }
+
+  .links-card {
+    @apply flex items-center gap-1 bg-[#0d3755] rounded-full py-1 px-2 border-1 text-[#f0f0f0] border-[#d9e3eb]  hover:text-[cyan] hover:border-[cyan];
   }
 }
 

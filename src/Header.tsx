@@ -50,7 +50,7 @@ const Header = () => {
         </button>
       </div>
       <img
-        src="src\assets\img\javier-quispe.jpg"
+        src="src\assets\img\javier-quispe.webp"
         alt="Javier Quispe"
         className="w-105 h-105 max-lg:self-end max-sm:h-80 max-sm:w-80 rounded-full object-cover shadow-2xl shadow-cyan-500/40"
       />

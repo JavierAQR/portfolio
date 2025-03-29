@@ -2,7 +2,7 @@ const About = () => {
   return (
     <section className="row-span-1">
       <h2 className="section-title">Sobre mí :)</h2>
-      <p className="mt-7 text-lg/8 max-sm:text-base/8">
+      <p className="text-lg/8 max-sm:text-base/8">
         He trabajado en proyectos personales y colaborativos, creando interfaces
         dinámicas, responsive y centradas en la experiencia del usuario. Estoy
         siempre abierto a aprender nuevas herramientas. Soy autodidacta, curioso

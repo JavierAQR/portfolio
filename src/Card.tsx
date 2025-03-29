@@ -1,28 +1,26 @@
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { IoEarthOutline } from "react-icons/io5";
 
-const Card = () => {
-  const tags = [
-    "React",
-    "TypeScript",
-    "react-hook-form",
-    "chartjs",
-    "react-router",
-    "zod",
-  ];
+interface Props {
+  tags: string[];
+  title: string;
+  description: string;
+  webName?: string;
+  codeName: string;
+  img: string;
+}
 
+const Card = ({ tags, title, description, webName, codeName, img }: Props) => {
   return (
-    <div className="flex items-center bg-[#3b82c425] p-3 rounded-3xl max-md:flex-col max-md:items-center max-md:gap-3 max-md:max-w-95">
+    <article className="flex items-center w-full bg-[#3b82c425] p-3 rounded-3xl max-md:flex-col max-md:items-center max-md:gap-3 max-md:max-w-95">
       <img
-        src="src\assets\img\proyecto-finanzas.jpg"
-        className="object-cover rounded-2xl max-w-90 max-h-90"
+        src={`src/assets/img/${img}.jpg`}
+        className="object-cover rounded-2xl max-w-90 max-h-90 bg-[gray]"
       />
       <div className="flex flex-col gap-5 px-5 max-lg:gap-2 max-lg:px-2 max-md:pl-0 ">
         <p className="text-sm">
-          <b className="font-extrabold">Gestor de Finanzas Personales: </b>
-          Permite registrar transacciones de categorías personalizables,
-          visualizar un historial en tablas dinámicas y establecer presupuestos.
-          Además, integra gráficos estadísticos para el seguimiento correcto de
-          las transacciones.
+          <b className="font-extrabold text-white">{title.toUpperCase()}: </b>
+          {description}
         </p>
         <div className="flex text-xs gap-1.5 flex-wrap">
           {tags.map((tag) => (
@@ -31,16 +29,31 @@ const Card = () => {
             </span>
           ))}
         </div>
-        <div className="flex gap-5">
-          <a href="">
-            <FaGithub fontSize={23} color="white" />
+        <div className="flex gap-2">
+          <a
+            href={`https://github.com/${codeName}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="links-card"
+          >
+            <FaGithub fontSize={20} />
+            <h5>Código</h5>
           </a>
-          <a href="">
-            <FaExternalLinkAlt fontSize={23} color="white" />
-          </a>
+
+          {webName && (
+            <a
+              href={`https://${webName}.netlify.app`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="links-card"
+            >
+              <IoEarthOutline fontSize={20} />
+              <h5>Demo</h5>
+            </a>
+          )}
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

@@ -5,12 +5,12 @@ const languages = ["HTML", "CSS", "JavaScript", "TypeScript"];
 const libraries = ["React", "Tailwind", "Bootstrap", "MaterialUI"];
 const dataBases = ["MySQL"];
 const tools = ["Git", "GitHub", "VSCode", "Figma", "Postman"];
-const Tecnologies = () => {
+const Technologies = () => {
   return (
-    <section className="row-span-2">
+    <section className="w-full row-span-2">
       <h2 className="section-title">Tecnologías</h2>
       <div className="flex flex-col items-center">
-        <div className="grid grid-cols-2 gap-10 my-7 w-full max-sm:grid-cols-1 max-sm:max-w-100">
+        <div className="grid grid-cols-2 gap-10 w-full max-sm:grid-cols-1 max-sm:max-w-100">
           <Technology name="Lenguajes">
             <TechnologyList data={languages} />
           </Technology>
@@ -29,4 +29,4 @@ const Tecnologies = () => {
   );
 };
 
-export default Tecnologies;
+export default Technologies;
