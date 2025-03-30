@@ -57,10 +57,14 @@ const Header = () => {
             <span>nonamesteam123@gmail.com</span>
           </div>
         </div>
-        <button className="flex justify-center items-center gap-2 px-3 w-45 h-12 bg-[#e4e4e4] text-[#0A1F2D] font-extrabold rounded-xl cursor-pointer hover:-translate-y-1 duration-50 ease-in hover:shadow-lg shadow-cyan-500/50">
+        <a
+          className="flex justify-center items-center gap-2 px-3 w-45 h-12 bg-[#e4e4e4] text-[#0A1F2D] font-extrabold rounded-xl cursor-pointer hover:-translate-y-1 duration-50 ease-in hover:shadow-lg shadow-cyan-500/50"
+          href="/Javier-Quispe-CV.pdf"
+          download="JavierQuispe_CV.pdf"
+        >
           <IoDocumentTextOutline fontSize={35} />
           Descargar CV
-        </button>
+        </a>
       </div>
       <div data-aos="zoom-out-down" data-aos-duration="1500">
         <img
