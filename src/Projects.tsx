@@ -23,6 +23,7 @@ const Projects = () => {
             "zod",
           ]}
         />
+
         <Card
           title="adivina la palabra"
           description="Juego inspirado en Wordle que cuenta con modos de 1 y 2 jugadores (en local). El juego sigue la esencia clásica de adivinar la palabra oculta en 6 intentos. Con una interfaz limpia y responsive. Ideal para amantes de los puzzles y la competencia amistosa."
@@ -48,6 +49,7 @@ const Projects = () => {
             "SpringBoot",
           ]}
         />
+
         <Card
           title="Tienda de ropa zephyra"
           description="E-commerce completo para venta de ropa moderna, con roles de Admin (gestión de inventario, tallas, ventas y usuarios) y User (catálogo interactivo, carrito de compras y autenticación segura), optimizado para una experiencia de compra fluida y escalable."

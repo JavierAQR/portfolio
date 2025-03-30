@@ -1,15 +1,28 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoDocumentTextOutline } from "react-icons/io5";
+
 import { SiGmail } from "react-icons/si";
+import SplitText from "./TextAnimations/SplitText/SplitText";
+import DecryptedText from "./TextAnimations/DecryptedText/DecryptedText";
 
 const Header = () => {
   return (
     <header className="grid h-screen lg:grid-cols-2 lg:items-center lg:justify-items-end max-lg:grid-cols-1 max-lg:justify-items-center max-lg:gap-10 max-sm:gap-5">
       <div className="flex flex-col lg:gap-8 max-lg:gap-5  max-lg:order-1">
-        <h1 className="text-6xl font-bold text-[cyan] max-sm:text-5xl">
-          Javier Quispe
-        </h1>
-        <h2 className="text-4xl">Desarrollador Web</h2>
+        <SplitText
+          text="Javier Quispe"
+          className="text-6xl font-bold text-[cyan] max-sm:text-5xl"
+          textAlign="left"
+        />
+        <DecryptedText
+          text="Desarrollador Web"
+          className="text-4xl"
+          speed={75}
+          animateOn="view"
+          sequential
+          revealDirection="start"
+        />
+
         <p>
           Estudiante de Ingeniería de Software. Entusiasta del desarrollo
           FrontEnd con ganas de explorar y aprender sobre nuevas tecnologías que
@@ -49,11 +62,13 @@ const Header = () => {
           Descargar CV
         </button>
       </div>
-      <img
-        src="src\assets\img\javier-quispe.webp"
-        alt="Javier Quispe"
-        className="w-105 h-105 max-lg:self-end max-sm:h-80 max-sm:w-80 rounded-full object-cover shadow-2xl shadow-cyan-500/40"
-      />
+      <div data-aos="zoom-out-down" data-aos-duration="1500">
+        <img
+          src="src\assets\img\javier-quispe.webp"
+          alt="Javier Quispe"
+          className="w-105 h-105 max-lg:self-end max-sm:h-80 max-sm:w-80 rounded-full object-cover shadow-2xl shadow-cyan-500/40"
+        />
+      </div>
     </header>
   );
 };

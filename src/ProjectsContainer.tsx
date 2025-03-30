@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import SectionTitle from "./SectionTitle";
 
 const ProjectsContainer = ({
   name,
@@ -9,8 +10,8 @@ const ProjectsContainer = ({
 }) => {
   return (
     <section>
-      <h2 className="section-title">{name}</h2>
-      <div className="flex flex-col items-center gap-3 max-md:gap-10">
+      <SectionTitle title={name} />
+      <div className="flex flex-col items-center gap-10 max-md:gap-10">
         <>{children}</>
       </div>
     </section>

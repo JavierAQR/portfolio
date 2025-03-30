@@ -11,7 +11,7 @@
 
 @layer base {
   span {
-    @apply text-[#e4e4e4] font-semibold;
+    @apply font-semibold;
   }
 
   h2 {
@@ -45,7 +45,7 @@
   }
 
   .section-title {
-    @apply border-b-1 pb-1 text-[cyan] mb-7;
+    @apply border-b-1 pb-1 text-[#00ffffb4] mb-7 w-full;
   }
 
   .links-card {

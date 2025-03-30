@@ -1,3 +1,4 @@
+import SectionTitle from "./SectionTitle";
 import { Technology } from "./TechnologyContainer";
 import TechnologyList from "./TechnologyList";
 
@@ -8,21 +9,29 @@ const tools = ["Git", "GitHub", "VSCode", "Figma", "Postman"];
 const Technologies = () => {
   return (
     <section className="w-full row-span-2">
-      <h2 className="section-title">Tecnologías</h2>
+      <SectionTitle title="Tecnologías" />
       <div className="flex flex-col items-center">
         <div className="grid grid-cols-2 gap-10 w-full max-sm:grid-cols-1 max-sm:max-w-100">
-          <Technology name="Lenguajes">
-            <TechnologyList data={languages} />
-          </Technology>
-          <Technology name="Librerías / Frameworks">
-            <TechnologyList data={libraries} />
-          </Technology>
-          <Technology name="Base de Datos">
-            <TechnologyList data={dataBases} />
-          </Technology>
-          <Technology name="Herramientas">
-            <TechnologyList data={tools} />
-          </Technology>
+          <div data-aos="fade-right">
+            <Technology name="Lenguajes">
+              <TechnologyList data={languages} />
+            </Technology>
+          </div>
+          <div data-aos="fade-left">
+            <Technology name="Librerías / Frameworks">
+              <TechnologyList data={libraries} />
+            </Technology>
+          </div>
+          <div data-aos="fade-right">
+            <Technology name="Base de Datos">
+              <TechnologyList data={dataBases} />
+            </Technology>
+          </div>
+          <div data-aos="fade-left">
+            <Technology name="Herramientas">
+              <TechnologyList data={tools} />
+            </Technology>
+          </div>
         </div>
       </div>
     </section>
