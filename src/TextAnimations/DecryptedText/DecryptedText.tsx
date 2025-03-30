@@ -3,7 +3,7 @@
 */
 
 import { useEffect, useState, useRef, ReactNode } from "react";
-import { color, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const styles = {
   wrapper: {
@@ -253,7 +253,9 @@ export default function DecryptedText({
           return (
             <span
               key={index}
-              className={isRevealedOrDone ? className : encryptedClassName}
+              className={
+                isRevealedOrDone ? className : encryptedClassName + " text-2xl"
+              }
             >
               {char}
             </span>

@@ -1,16 +1,12 @@
-/*
-	Installed from https://reactbits.dev/ts/default/
-*/
-
-import { useSprings, animated, SpringValue } from "@react-spring/web";
-import { useEffect, useRef, useState, MutableRefObject } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 interface SplitTextProps {
   text?: string;
   className?: string;
   delay?: number;
-  animationFrom?: { opacity: number; transform: string };
-  animationTo?: { opacity: number; transform: string };
+  animationFrom?: { opacity: number; y: number };
+  animationTo?: { opacity: number; y: number };
   easing?: (t: number) => number;
   threshold?: number;
   rootMargin?: string;
@@ -22,8 +18,8 @@ const SplitText: React.FC<SplitTextProps> = ({
   text = "",
   className = "",
   delay = 100,
-  animationFrom = { opacity: 0, transform: "translate3d(0,40px,0)" },
-  animationTo = { opacity: 1, transform: "translate3d(0,0,0)" },
+  animationFrom = { opacity: 0, y: 40 },
+  animationTo = { opacity: 1, y: 0 },
   easing = (t: number) => t,
   threshold = 0.1,
   rootMargin = "-100px",
@@ -34,7 +30,7 @@ const SplitText: React.FC<SplitTextProps> = ({
   const letters = words.flat();
   const [inView, setInView] = useState(false);
   const ref = useRef<HTMLParagraphElement>(null);
-  const animatedCount = useRef(0);
+  const controls = useAnimation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -56,29 +52,41 @@ const SplitText: React.FC<SplitTextProps> = ({
     return () => observer.disconnect();
   }, [threshold, rootMargin]);
 
-  const springs = useSprings(
+  useEffect(() => {
+    if (inView) {
+      const animateLetters = async () => {
+        const letterAnimations = letters.map((_, i) =>
+          controls.start({
+            opacity: animationTo?.opacity ?? 1,
+            y: animationTo?.y ?? 0,
+            transition: {
+              ease: easing,
+              delay: i * (delay / 1000),
+            },
+          })
+        );
+
+        await Promise.all(letterAnimations);
+
+        if (onLetterAnimationComplete) {
+          onLetterAnimationComplete();
+        }
+      };
+
+      animateLetters();
+    }
+  }, [
+    inView,
+    controls,
     letters.length,
-    letters.map((_, i) => ({
-      from: animationFrom,
-      to: inView
-        ? async (next: (props: any) => Promise<void>) => {
-            await next(animationTo);
-            animatedCount.current += 1;
-            if (
-              animatedCount.current === letters.length &&
-              onLetterAnimationComplete
-            ) {
-              onLetterAnimationComplete();
-            }
-          }
-        : animationFrom,
-      delay: i * delay,
-      config: { easing },
-    }))
-  );
+    delay,
+    easing,
+    animationTo,
+    onLetterAnimationComplete,
+  ]);
 
   return (
-    <p
+    <motion.p
       ref={ref}
       className={`split-parent ${className}`}
       style={{
@@ -90,7 +98,7 @@ const SplitText: React.FC<SplitTextProps> = ({
       }}
     >
       {words.map((word, wordIndex) => (
-        <span
+        <motion.span
           key={wordIndex}
           style={{ display: "inline-block", whiteSpace: "nowrap" }}
         >
@@ -100,24 +108,32 @@ const SplitText: React.FC<SplitTextProps> = ({
               letterIndex;
 
             return (
-              <animated.span
+              <motion.span
                 key={index}
-                style={{
-                  ...springs[index],
-                  display: "inline-block",
-                  willChange: "transform, opacity",
+                initial={{
+                  opacity: animationFrom?.opacity ?? 0,
+                  y: animationFrom?.y ?? 40,
                 }}
+                animate={{
+                  opacity: animationTo?.opacity ?? 1,
+                  y: animationTo?.y ?? 0,
+                  transition: {
+                    ease: easing,
+                    delay: index * (delay / 1000),
+                  },
+                }}
+                style={{ display: "inline-block" }}
               >
                 {letter}
-              </animated.span>
+              </motion.span>
             );
           })}
           <span style={{ display: "inline-block", width: "0.3em" }}>
             &nbsp;
           </span>
-        </span>
+        </motion.span>
       ))}
-    </p>
+    </motion.p>
   );
 };
 
