@@ -64,7 +64,7 @@ const Header = () => {
       </div>
       <div data-aos="zoom-out-down" data-aos-duration="1500">
         <img
-          src="src\assets\img\javier-quispe.webp"
+          src="img/javier-quispe.webp"
           alt="Javier Quispe"
           className="w-105 h-105 max-lg:self-end max-sm:h-80 max-sm:w-80 rounded-full object-cover shadow-2xl shadow-cyan-500/40"
         />

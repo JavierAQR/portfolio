@@ -15,7 +15,7 @@ const Card = ({ tags, title, description, webName, codeName, img }: Props) => {
     <div data-aos="zoom-in-left">
       <article className="flex items-center w-full bg-[#3b82c425] p-3 rounded-3xl max-md:flex-col max-md:items-center max-md:gap-3 max-md:max-w-95">
         <img
-          src={`src/assets/img/${img}.jpg`}
+          src={`img/${img}.jpg`}
           className="object-cover rounded-2xl max-w-90 max-h-90 bg-[gray]"
         />
         <div className="flex flex-col gap-5 px-5 max-lg:gap-2 max-lg:px-2 max-md:pl-0 ">

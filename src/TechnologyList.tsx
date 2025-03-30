@@ -7,7 +7,7 @@ const TechnologyList = ({ data }: { data: string[] }) => {
       {data.map((item) => (
         <TechnologyItem name={item}>
           <img
-            src={`src/assets/icons/${item}.svg`}
+            src={`icons/${item}.svg`}
             style={{ width: sizeIcon, height: sizeIcon }}
             alt={item}
           />
