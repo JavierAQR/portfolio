@@ -2,10 +2,11 @@ import SectionTitle from "./SectionTitle";
 import { Technology } from "./TechnologyContainer";
 import TechnologyList from "./TechnologyList";
 
-const languages = ["HTML", "CSS", "JavaScript", "TypeScript"];
+const languages = ["HTML", "CSS", "JavaScript", "TypeScript", "Java"];
 const libraries = ["React", "Tailwind", "Bootstrap", "MaterialUI"];
 const dataBases = ["MySQL"];
-const tools = ["Git", "GitHub", "VSCode", "Figma", "Postman"];
+const tools = ["Git", "GitHub", "VSCode", "Postman"];
+const learning = ["Node.js", "Express.js"];
 const Technologies = () => {
   return (
     <section className="w-full row-span-2">
@@ -30,6 +31,11 @@ const Technologies = () => {
           <div data-aos="fade-left">
             <Technology name="Herramientas">
               <TechnologyList data={tools} />
+            </Technology>
+          </div>
+          <div data-aos="fade-right">
+            <Technology name="Aprendiendo">
+              <TechnologyList data={learning} />
             </Technology>
           </div>
         </div>
