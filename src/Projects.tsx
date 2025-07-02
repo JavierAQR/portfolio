@@ -29,7 +29,7 @@ const Projects = () => {
           description="Juego inspirado en Wordle que cuenta con modos de 1 y 2 jugadores (en local). El juego sigue la esencia clásica de adivinar la palabra oculta en 6 intentos. Con una interfaz limpia y responsive. Ideal para amantes de los puzzles y la competencia amistosa."
           img="word-game"
           webName="word-game-multi"
-          codeName="JavierAQR/gestor-finanzas"
+          codeName="JavierAQR/word-game-multi"
           tags={["React", "TypeScript", "Material UI"]}
         />
       </ProjectsContainer>
