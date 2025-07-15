@@ -2,10 +2,10 @@ import SectionTitle from "./SectionTitle";
 import { Technology } from "./TechnologyContainer";
 import TechnologyList from "./TechnologyList";
 
-const languages = ["HTML", "CSS", "JavaScript", "TypeScript", "Java"];
-const libraries = ["React", "Tailwind", "Bootstrap", "MaterialUI"];
+const languages = ["HTML", "CSS", "JavaScript", "TypeScript", "Java", "PHP"];
+const libraries = ["React", "Tailwind", "Bootstrap", "Laravel", "Next", "MaterialUI"];
 const dataBases = ["MySQL"];
-const tools = ["Git", "GitHub", "VSCode", "Postman"];
+const tools = ["Git", "GitHub", "VSCode", "Postman", "Figma"];
 const learning = ["Node.js", "Express.js"];
 const Technologies = () => {
   return (
