@@ -23,8 +23,7 @@ const Header = () => {
           revealDirection="start"
         />
         <p>
-          Estudiante de Ingeniería de Software. Con ganas de explorar y aprender
-          sobre nuevas tecnologías que potencien mi crecimiento profesional.
+          Estudiante de Ingeniería de Software orientado al desarrollo de soluciones web modernas.
         </p>
         <div className="flex flex-wrap gap-8 text-white max-sm:gap-5">
           <a
