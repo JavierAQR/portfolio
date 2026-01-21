@@ -56,7 +56,7 @@ const Header = () => {
         </div>
         <a
           className="flex justify-center items-center gap-2 px-3 w-45 h-12 bg-[#e4e4e4] text-[#0A1F2D] font-extrabold rounded-xl cursor-pointer hover:-translate-y-1 duration-50 ease-in hover:shadow-lg shadow-cyan-500/50"
-          href="/docs/Javier-Quispe-CV.pdf"
+          href="/docs/Javier_Quispe_CV.pdf"
           download="JavierQuispe_CV.pdf"
         >
           <IoDocumentTextOutline fontSize={35} />
