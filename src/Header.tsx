@@ -4,24 +4,40 @@ import { IoDocumentTextOutline } from "react-icons/io5";
 import { SiGmail } from "react-icons/si";
 import SplitText from "./TextAnimations/SplitText/SplitText";
 import DecryptedText from "./TextAnimations/DecryptedText/DecryptedText";
+import { useEffect, useState } from "react";
 
 const Header = () => {
+  const [active, setActive] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setActive(true);
+    }, 1000);
+    return () => clearTimeout(timer);
+  })
   return (
     <header className="grid h-screen lg:grid-cols-2 lg:items-center lg:justify-items-end max-lg:grid-cols-1 max-lg:justify-items-center max-lg:gap-10 max-sm:gap-5">
       <div className="flex flex-col lg:gap-8 max-lg:gap-5  max-lg:order-1">
-        <SplitText
-          text="Javier Quispe"
-          className="text-6xl font-bold text-[cyan] max-sm:text-5xl"
-          textAlign="left"
-        />
-        <DecryptedText
-          text="Desarrollador Web"
-          className="text-4xl"
-          speed={75}
-          animateOn="view"
-          sequential
-          revealDirection="start"
-        />
+        <div className="flex flex-col gap-2">
+          <SplitText
+            text="Javier Quispe"
+            className="text-6xl font-bold text-[cyan] max-sm:text-5xl"
+            textAlign="left"
+          />
+          <div className="min-h-[45px]">
+
+            {active && (
+              <DecryptedText
+                text="Desarrollador Fullstack"
+                className="text-4xl"
+                speed={75}
+                animateOn={"view"}
+                sequential
+                revealDirection="start"
+              />
+            )}
+          </div>
+        </div>
         <p>
           Estudiante de Ingeniería de Software orientado al desarrollo de soluciones web modernas.
         </p>
