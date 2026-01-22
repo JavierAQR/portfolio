@@ -41,7 +41,7 @@
   }
 
   .tecnology-list {
-    @apply grid grid-cols-4 gap-y-5 max-lg:grid-cols-3 max-md:grid-cols-2 w-full;
+    @apply grid grid-cols-6 gap-y-5 max-lg:grid-cols-3 max-md:grid-cols-2 w-full;
   }
 
   .section-title {

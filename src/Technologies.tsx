@@ -12,7 +12,7 @@ const Technologies = () => {
     <section className="w-full row-span-2">
       <SectionTitle title="Tecnologías" />
       <div className="flex flex-col items-center">
-        <div className="grid grid-cols-2 gap-10 w-full max-sm:grid-cols-1 max-sm:max-w-100">
+        <div className="grid grid-cols-1 gap-10 w-full max-sm:grid-cols-1 max-sm:max-w-100">
           <div data-aos="fade-right">
             <Technology name="Lenguajes">
               <TechnologyList data={languages} />
@@ -24,7 +24,7 @@ const Technologies = () => {
             </Technology>
           </div>
           <div data-aos="fade-right">
-            <Technology name="Base de Datos">
+            <Technology name="Bases de Datos">
               <TechnologyList data={dataBases} />
             </Technology>
           </div>
