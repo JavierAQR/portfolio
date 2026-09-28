@@ -8,24 +8,48 @@ interface Props {
   webName?: string;
   codeName: string;
   img: string;
+  compact?: boolean;
 }
 
-const Card = ({ tags, title, description, webName, codeName, img }: Props) => {
+const Card = ({
+  tags,
+  title,
+  description,
+  webName,
+  codeName,
+  img,
+  compact,
+}: Props) => {
   return (
     <div data-aos="zoom-in-left">
-      <article className="flex items-center w-full bg-[#3b82c425] p-3 rounded-3xl max-md:flex-col max-md:items-center max-md:gap-3 max-md:max-w-95">
+      <article
+        className={`flex items-center w-full bg-[#3b82c425] rounded-3xl max-md:flex-col max-md:items-center max-md:gap-3 max-md:max-w-95 ${
+          compact ? "p-2" : "p-3"
+        }`}
+      >
         <img
           src={`img/${img}.jpg`}
-          className="object-cover rounded-2xl max-w-90 max-h-90 bg-[gray]"
+          className={`object-cover rounded-2xl bg-[gray] ${
+            compact ? "max-w-40 max-h-40" : "max-w-90 max-h-90"
+          }`}
         />
-        <div className="flex flex-col gap-5 px-5 max-lg:gap-2 max-lg:px-2 max-md:pl-0 ">
-          <p className="text-sm">
-            <b className="font-extrabold text-white">{title.toUpperCase()}: </b>
+        <div
+          className={`flex flex-col px-5 max-lg:px-2 max-md:pl-0 ${
+            compact ? "gap-2" : "gap-5 max-lg:gap-2"
+          }`}
+        >
+          <p className={compact ? "text-xs" : "text-sm"}>
+            <b className="font-extrabold text-white">
+              {title.toUpperCase()}:{" "}
+            </b>
             {description}
           </p>
           <div className="flex text-xs gap-1.5 flex-wrap">
             {tags.map((tag) => (
-              <span className="font-light rounded-full text-[#e4e4e4] bg-[#275981] px-2 py-1">
+              <span
+                key={tag}
+                className="font-light rounded-full text-[#e4e4e4] bg-[#275981] px-2 py-1"
+              >
                 {tag}
               </span>
             ))}
@@ -37,7 +61,7 @@ const Card = ({ tags, title, description, webName, codeName, img }: Props) => {
               rel="noopener noreferrer"
               className="links-card"
             >
-              <FaGithub fontSize={20} />
+              <FaGithub fontSize={compact ? 16 : 20} />
               <h5>Código</h5>
             </a>
 
@@ -48,7 +72,7 @@ const Card = ({ tags, title, description, webName, codeName, img }: Props) => {
                 rel="noopener noreferrer"
                 className="links-card"
               >
-                <IoEarthOutline fontSize={20} />
+                <IoEarthOutline fontSize={compact ? 16 : 20} />
                 <h5>Demo</h5>
               </a>
             )}

@@ -2,14 +2,24 @@ import SectionTitle from "./SectionTitle";
 import { Technology } from "./TechnologyContainer";
 import TechnologyList from "./TechnologyList";
 
-const languages = ["HTML", "CSS", "JavaScript", "TypeScript"];
-const libraries = ["React", "Express.js", "Tailwind", "Bootstrap", "Prisma", "JWT"];
+const languages = ["HTML", "CSS", "JavaScript", "TypeScript", "PHP"];
+const libraries = [
+  "React",
+  "Vue",
+  "Node.js",
+  "Express.js",
+  "Laravel",
+  "Tailwind",
+  "Bootstrap",
+  "Prisma",
+  "JWT",
+];
 const dataBases = ["MySQL", "PostgreSQL"];
 const tools = ["Git", "GitHub", "VSCode", "Postman", "Figma"];
-/* const learning = ["Node.js", "Express.js"]; */
+
 const Technologies = () => {
   return (
-    <section className="w-full row-span-2">
+    <section className="w-full" id="technologies">
       <SectionTitle title="Tecnologías" />
       <div className="flex flex-col items-center">
         <div className="grid grid-cols-1 gap-10 w-full max-sm:grid-cols-1 max-sm:max-w-100">
@@ -33,11 +43,6 @@ const Technologies = () => {
               <TechnologyList data={tools} />
             </Technology>
           </div>
-         {/*  <div data-aos="fade-right">
-            <Technology name="Aprendiendo">
-              <TechnologyList data={learning} />
-            </Technology>
-          </div> */}
         </div>
       </div>
     </section>
