@@ -38,7 +38,7 @@ const Header = () => {
           </div>
         </div>
         <p>
-          Estudiante de Ingeniería de Software y desarrollador de sistemas web
+          Estudiante de último ciclo de Ingeniería de Software y desarrollador de sistemas web
           para empresas y negocios. Disponible para proyectos freelance.
         </p>
         <div className="flex flex-wrap gap-8 text-white max-sm:gap-5">
